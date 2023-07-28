@@ -43,7 +43,9 @@ class Solution:
       length=len(prices)
       for i in range(length):
         for j in range(i):
-          maxprofit=max(maxprofit, prices[i]-prices[j])
+          for k in range(j):
+            for l in range(k):
+              maxprofit=max(maxprofit, prices[i]-prices[j]+prices[k]-prices[l])
       return maxprofit
 
 def main():
